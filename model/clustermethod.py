@@ -47,6 +47,26 @@ def construct_net_from_emd(id_protein, relations, emds, w):
             w[u][v] = cosine_w[u][v]
     return w, relations
 
+def cal_jcs(id_protein, relations, w):
+    protein_num = len(id_protein)
+    for u in trange(protein_num, desc='Jaccard'):
+        N_u = relations[u]
+        for v in range(u+1, protein_num):
+            N_v = relations[v]
+            if len(N_u)>1 or len(N_v)>1:
+                inter = set(N_u) & set(N_v)
+                union = set(N_u) | set(N_v)
+                if len(inter) < 1:
+                    w[u][v] = 0.0
+                    w[v][u] = 0.0
+                else:
+                    w[u][v] = float(len(inter)) / len(union)
+                    w[v][u] = float(len(inter)) / len(union)
+            else:
+                w[u][v] = 0.0
+                w[v][u] = 0.0
+    return w
+
 def cal_second(id_protein, relations, w):
     protein_num = len(id_protein)
     for u in range(protein_num):

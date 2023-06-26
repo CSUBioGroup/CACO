@@ -11,7 +11,7 @@ CACO: A core-attachment method with cross-species functional ortholog informatio
 
 - CORUM: data/human_main_all.txt
 
-## Usage
+## Usage of CACO based on GO terms
 
 ### Run demo:
 ```
@@ -33,6 +33,19 @@ python CACO.py --input ./data/string_dataset.txt --GOfile ./data/human_mus_go_re
 >
 > --output: the result file
 
+
+## We also provide CACO when the GO terms are missing
+### Apply CACO on a single PPI network
+```
+python CACO_top.py --input ./data/string_dataset.txt --Core_threshold 0.4 --output ./results/BioGRID_network.txt
+```
+### Parameters
+
+> --input: PPI network
+>
+> --Core_threshold: the threshold in generating Cores
+>
+> --output: the result file
 
 ## Concat
 Please feel free to contact us for any further questions.
