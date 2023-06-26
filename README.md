@@ -12,7 +12,7 @@ CACO: A core-attachment method with cross-species functional ortholog informatio
 - CORUM: data/human_main_all.txt
 
 ## Usage of CACO based on GO terms
-
+You can directly test your own dataset on our web-server: https://csuligroup.com/CACO
 ### Run demo:
 ```
 python CACO.py
@@ -52,3 +52,6 @@ Please feel free to contact us for any further questions.
 
 - Wenkang Wang wangwk@csu.edu.cn
 - Min Li limin@mail.csu.edu.cn
+
+## References
+CACO: A core-attachment method with cross-species functional ortholog information to detect human protein complexes.
