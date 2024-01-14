@@ -47,11 +47,11 @@ python CACO_top.py --input ./data/string_dataset.txt --Core_threshold 0.4 --outp
 >
 > --output: the result file
 
-## Concat
+## Contact
 Please feel free to contact us for any further questions.
 
 - Wenkang Wang wangwk@csu.edu.cn
 - Min Li limin@mail.csu.edu.cn
 
 ## References
-CACO: A core-attachment method with cross-species functional ortholog information to detect human protein complexes.
+Wang W, Meng X, Xiang J, et al. CACO: A core-attachment method with cross-species functional ortholog information to detect human protein complexes[J]. IEEE Journal of Biomedical and Health Informatics, 2023.
